@@ -1,13 +1,13 @@
-pipline {
+pipeline {
   agent any
-  stges {
+  stages {
     stage('Build') {
       steps {
         sh 'g++ -o task5 main/hello.cpp'
         echo 'Build Successful!'
       }
     }
-    sage('Test') {
+    stage('Test') {
       steps {
         sh './task5'
         echo 'Test Successful!'
